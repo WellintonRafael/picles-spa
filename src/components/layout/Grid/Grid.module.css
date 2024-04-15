@@ -1,0 +1,7 @@
+.grid {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  max-width: 772px;
+  padding: var(--spacing-sm);
+}

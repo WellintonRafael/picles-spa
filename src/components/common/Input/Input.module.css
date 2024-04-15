@@ -1,0 +1,20 @@
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.inputGroup label {
+  color: var(--color-gray-300);
+}
+
+.inputGroup input {
+  width: 100%;
+  height: var(--spacing-xxl);
+  border: 1px solid var(--color-gray-300);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-300);
+  background: transparent;
+  padding: 0 var(--spacing-sm);
+  box-sizing: border-box;
+}

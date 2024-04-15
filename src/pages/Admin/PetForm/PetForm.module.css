@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--spacing-md);
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(50% - 6px), 1fr));
+  gap: var(--spacing-md);
+}
+
+.buttons {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+.buttons button {
+  flex-basis: 230px;
+}
+
+.formError {
+  color: var(--color-danger);
+  margin: var(--spacing-xs) 0 0;
+}

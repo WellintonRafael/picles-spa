@@ -1,0 +1,19 @@
+.sidebar {
+  display: flex;
+  flex-basis: 240px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--color-primary);
+  padding: var(--spacing-xxl) var(--spacing-xl);
+  gap: var(--spacing-lg);
+}
+
+.sidebar a {
+  color: var(--color-white);
+}
+
+.sidebar a.active {
+  font-weight: var(--font-weight-bold);
+}

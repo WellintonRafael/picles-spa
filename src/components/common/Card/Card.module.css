@@ -1,0 +1,19 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  text-decoration: none;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card span {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-300);
+  overflow-wrap: break-word;
+}

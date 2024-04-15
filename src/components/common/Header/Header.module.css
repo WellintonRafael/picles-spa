@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-xxl);
+}
+
+.return {
+  color: var(--color-gray-300);
+}

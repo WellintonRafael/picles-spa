@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--spacing-md);
+}
+
+.buttonNewPet {
+  max-width: 230px;
+}
+
+.list {
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-lg);
+  border-bottom: solid 1px var(--color-gray-300);
+  padding: var(--spacing-md);
+}
+
+.item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.item span {
+  display: flex;
+  flex: 1;
+  color: var(--color-gray-300);
+}
+
+.item button {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-300);
+}
+
+.dialogOverlay {
+  background-color: var(--color-gray-300);
+  opacity: 0.5;
+  position: fixed;
+  inset: 0;
+}
+
+.dialogContent {
+  background-color: white;
+  border-radius: 6px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 450px;
+  max-height: 85vh;
+  padding: 25px;
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.dialogContent:focus {
+  outline: none;
+}
+
+.dialogTitle,
+.dialogDescription {
+  margin: 0;
+}
+
+.dialogButtons {
+  display: flex;
+  gap: var(--spacing-sm);
+}

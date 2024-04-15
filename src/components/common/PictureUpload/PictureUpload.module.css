@@ -1,0 +1,22 @@
+.pictureUpload {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+  cursor: pointer;
+}
+
+.pictureUpload img {
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-gray-200);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pictureUpload span {
+  color: var(--color-gray-300);
+}
+
+.hiddenInput {
+  height: 0;
+}
