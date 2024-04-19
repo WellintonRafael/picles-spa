@@ -8,6 +8,8 @@ import styles from './Pets.module.css';
 import { Skeleton } from "../../components/common/Skeleton";
 import { Pagination } from "../../components/common/Pagination";
 import { useSearchParams } from "react-router-dom";
+import { usePetList } from "../../hooks/usePetList";
+import { Select } from "../../components/common/Select";
 
 export function Pets() {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -16,10 +18,7 @@ export function Pets() {
         page: searchParams.get('page') ? Number(searchParams.get('page')) : 1
     }
 
-    const { data, isLoading } = useQuery({
-        queryKey: ['get-pets', urlParams],
-        queryFn: () => getPets(urlParams),
-    });
+    const { data, isLoading } = usePetList(urlParams)
 
     function changePage(page: number) {
         setSearchParams((params) => {
@@ -32,15 +31,29 @@ export function Pets() {
         <Grid>
             <div className={styles.container}>
                 <Header />
+
+                <form className={styles.filter}>
+                    <div className={styles.columns}>
+                        <div className={styles.column}>
+                            <Select label="Espécie" options={[
+                                { value: '', text: 'Todos' },
+                                { value: 'cachorro', text: 'Cachorros' },
+                                { value: 'gato', text: 'Gatos' }
+                            ]}
+                            />
+                        </div>
+                    </div>
+                </form>
+
                 {
-                    isLoading && (<Skeleton containerClassName={styles.skeleton} count={10}/>)
+                    isLoading && (<Skeleton containerClassName={styles.skeleton} count={10} />)
                 }
                 <main className={styles.list}>
                     {data?.items?.map((pet) => (<Card key={pet.id} href={`/pet/${pet.id}`} text={pet.name} thumb={pet.photo} />))}
                 </main>
                 {
-                    
-                    data?.currentPage && (<Pagination currentPage={data.currentPage} totalPages={data.totalPages} onPageChange={(number) => changePage(number)}/>)
+
+                    data?.currentPage && (<Pagination currentPage={data.currentPage} totalPages={data.totalPages} onPageChange={(number) => changePage(number)} />)
                 }
             </div>
         </Grid>
