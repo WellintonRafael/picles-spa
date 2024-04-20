@@ -12,7 +12,7 @@ interface ISelect extends SelectHTMLAttributes<HTMLSelectElement> {
 export function Select({ label, options, ...rest }: ISelect) {
     return (
         <div className={styles.selectGroup}>
-            <label>Select</label>
+            <label>{label}</label>
             <select {...rest}>
                 {
                     options.map((option) => (
