@@ -1,15 +1,14 @@
-import { useQuery } from "@tanstack/react-query";
 import 'react-loading-skeleton/dist/skeleton.css';
+import { useSearchParams } from "react-router-dom";
+import { Button } from "../../components/common/Button";
 import { Card } from "../../components/common/Card/Card";
 import { Header } from "../../components/common/Header";
-import { Grid } from "../../components/layout/Grid";
-import { getPets } from "../../services/pets/getPets";
-import styles from './Pets.module.css';
-import { Skeleton } from "../../components/common/Skeleton";
 import { Pagination } from "../../components/common/Pagination";
-import { useSearchParams } from "react-router-dom";
-import { usePetList } from "../../hooks/usePetList";
 import { Select } from "../../components/common/Select";
+import { Skeleton } from "../../components/common/Skeleton";
+import { Grid } from "../../components/layout/Grid";
+import { usePetList } from "../../hooks/usePetList";
+import styles from './Pets.module.css';
 
 export function Pets() {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -32,7 +31,7 @@ export function Pets() {
             <div className={styles.container}>
                 <Header />
 
-                <form className={styles.filter}>
+                <form className={styles.filters}>
                     <div className={styles.columns}>
                         <div className={styles.column}>
                             <Select label="Espécie" options={[
@@ -43,6 +42,7 @@ export function Pets() {
                             />
                         </div>
                     </div>
+                    <Button type="submit">Buscar</Button>
                 </form>
 
                 {
