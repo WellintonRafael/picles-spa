@@ -98,7 +98,7 @@ export function Pets() {
           {data?.items?.map((pet) => (
             <Card
               key={pet.id}
-              href={`/pet/${pet.id}`}
+              href={`/pets/${pet.id}`}
               text={pet.name}
               thumb={pet.photo}
             />
