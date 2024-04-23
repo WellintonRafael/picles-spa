@@ -57,7 +57,7 @@ export function PetDetails() {
                                         !shelterIsError &&
                                         <a href={`https://wa.me/${shelterData?.shelterWhatsApp}?text=Olá, gostaria de mais informações sobre: ${petData?.name}`} target="_blank">
                                             <Button variant={ButtonVariant.Text}>
-                                                <span>
+                                                <span className={styles.buttonWhatsapp}>
                                                     <img src={whatsapp}/>
                                                     Entre em contato com o abrigo
                                                 </span>
