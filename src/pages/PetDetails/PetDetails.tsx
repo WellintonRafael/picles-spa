@@ -23,7 +23,7 @@ export function PetDetails() {
         }
     })
 
-    
+
 
     return (
         <Grid>
@@ -58,7 +58,7 @@ export function PetDetails() {
                                         <a href={`https://wa.me/${shelterData?.shelterWhatsApp}?text=Olá, gostaria de mais informações sobre: ${petData?.name}`} target="_blank">
                                             <Button variant={ButtonVariant.Text}>
                                                 <span className={styles.buttonWhatsapp}>
-                                                    <img src={whatsapp}/>
+                                                    <img src={whatsapp} />
                                                     Entre em contato com o abrigo
                                                 </span>
                                             </Button>

@@ -1,3 +1,5 @@
+import { Panel } from "../../../components/layout/Panel";
+
 export function PetList() {
-    return <>Listagem de Pets</>
+    return <Panel >Listagem de Pets</Panel>
 }

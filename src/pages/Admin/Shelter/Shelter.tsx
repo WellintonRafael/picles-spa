@@ -1,3 +1,5 @@
+import { Panel } from "../../../components/layout/Panel";
+
 export function Shelter() {
-    return <>Formulário de abrigo</>
+    return <Panel>Formulário de abrigo</Panel>
 }
